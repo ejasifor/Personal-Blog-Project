@@ -4,13 +4,14 @@
     display:grid;
     min-height: 100vh;
     grid-template-rows:70px 70px 1fr 40px;
-    grid-template-columns:1fr 350px;
+    grid-template-columns:1fr;
     max-width: 1000em;
     grid-template-areas:
-    "nav nav"
-    "title sd"
-    "body sd"
-    "ft ft";
+    "nav"
+    "title"
+    "body"
+    "sd"
+    "ft";
     
 }
 
@@ -48,4 +49,25 @@
 
 #footer{
     grid-area:ft;
+}
+@media(min-width:641px){
+    .container{
+        border: solid black 1px;
+        background-color: gold;
+        display:grid;
+        min-height: 100vh;
+        grid-template-rows:70px 70px 1fr 40px;
+        grid-template-columns:1fr 350px;
+        max-width: 1000em;
+        grid-template-areas:
+        "nav nav"
+        "title sd"
+        "body sd"
+        "ft ft";
+    }
+
+    #postTitle{
+        justify-content: center;
+    }
+
 }

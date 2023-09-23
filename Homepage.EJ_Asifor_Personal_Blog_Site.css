@@ -1,4 +1,4 @@
-.container{ 
+.container{
     font-family: Helvetica, arial, sans-serif;
     border:solid 1px black;
     width: 100%;
@@ -9,15 +9,14 @@
     grid-auto-rows:minmax(100px, auto) ;
     grid-gap:15px;*/
 
-    grid-template-columns: 1fr 100px;
+    grid-template-columns: 1fr;
     grid-template-rows: 70px 70px 50px 1fr 40px;
     grid-template-areas: 
-    "hd hd"
-    "nav nav"
-    "lp lp"
-    "pg pg"
-    "ft ft";
-
+    "hd"
+    "nav"
+    "lp"
+    "pg"
+    "ft";
 }
 
 .postgrid{
@@ -25,10 +24,11 @@
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-auto-rows: minmax(300px, auto);
     grid-gap: 15px;
     grid-area:pg;
+    background-im
 }
 
 .blogpost{
@@ -53,14 +53,17 @@
     grid-area:hd;
 }
 
-#two{
+#latestPosts{
     grid-area:lp;
     display:flex;
     flex-direction: row;
     justify-content: start;
 }
 
-#three{
+#footer{
+    background-image: ("Images/E-Major-Key-Signauture-1.jpg");
+    background-repeat: repeat;
+    background-clip: content-box ;
     grid-area:ft;
 }
 
@@ -72,6 +75,64 @@
     padding:1.5em;
     flex-direction: row;
     justify-content: center;
-    grid-area:nav;
+    grid-area: nav;
 
+}
+
+@media(min-width:601px){
+    .container{
+        display: grid;
+    /*grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows:minmax(100px, auto) ;
+    grid-gap:15px;*/
+
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: 70px 70px 50px 1fr 40px;
+    grid-template-areas: 
+    "hd hd"
+    "nav nav"
+    "lp lp"
+    "pg pg"
+    "ft ft";}
+
+    .postgrid{
+        border: solid green 1px;   
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(300px, auto);
+        grid-gap: 15px;
+        grid-area:pg;
+        background-im
+    }
+}
+
+@media(min-width:1051px){
+    .container{
+        display: grid;
+    /*grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows:minmax(100px, auto) ;
+    grid-gap:15px;*/
+
+    grid-template-columns: 1fr 100px;
+    grid-template-rows: 70px 70px 50px 1fr 40px;
+    grid-template-areas: 
+    "hd hd"
+    "nav nav"
+    "lp lp"
+    "pg pg"
+    "ft ft";}
+
+    .postgrid{
+        border: solid green 1px;   
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(300px, auto);
+        grid-gap: 15px;
+        grid-area:pg;
+        background-im
+    }
 }
