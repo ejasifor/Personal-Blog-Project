@@ -1,11 +1,11 @@
 .container{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: solid black 1px;
     background-color: gold;
     display:grid;
     min-height: 100vh;
-    grid-template-rows:70px 70px 1fr 40px;
-    grid-template-columns:1fr;
-    max-width: 1000em;
+    grid-template-rows:70px 90px 1fr 300px 50px;
+    grid-template-columns:100%;
     grid-template-areas:
     "nav"
     "title"
@@ -19,24 +19,29 @@
     border:solid black 1px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
-
     
 }
 
 #nav{
     border: solid black 1px;
     grid-area:nav;
+    justify-content: center;
+}
+
+img{
+    width:100%;
+    height: auto;
 }
 
 #sidebar{
     grid-area:sd;
+    justify-content: center;
 }
 
 #postTitle{
     grid-area:title;
-    justify-content: start;
-    padding-left: 10px;
+    justify-content: center;
+    padding-left: 15px;
 
     
 }
@@ -49,15 +54,25 @@
 
 #footer{
     grid-area:ft;
+    justify-content: center;
+    padding-top: 10px;
 }
-@media(min-width:641px){
+
+
+#postTitle{
+        justify-content: center;
+    }
+
+/*Below are the responsive rules for above 700px screen width.*/
+
+@media(min-width:601px){
     .container{
         border: solid black 1px;
         background-color: gold;
         display:grid;
         min-height: 100vh;
-        grid-template-rows:70px 70px 1fr 40px;
-        grid-template-columns:1fr 350px;
+        grid-template-rows:70px 90px 1fr 50px;
+        grid-template-columns:1fr 200px;
         max-width: 1000em;
         grid-template-areas:
         "nav nav"
@@ -66,8 +81,25 @@
         "ft ft";
     }
 
+}
+
+@media(min-width:1101px) {
+    .container{
+        border: solid black 1px;
+        background-color: gold;
+        display:grid;
+        min-height: 100vh;
+        grid-template-rows:70px 90px 1fr 50px;
+        grid-template-columns:1fr 350px;
+        max-width: 1000em;
+        grid-template-areas:
+        "nav nav"
+        "title sd"
+        "body sd"
+        "ft ft";
+    }
     #postTitle{
-        justify-content: center;
+        justify-content:left;
     }
 
 }
